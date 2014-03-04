@@ -13,4 +13,5 @@ function checkWeekend(date)
    }
 }
 
-document.write(checkWeekend(today));
+document.write
+(checkWeekend(today));

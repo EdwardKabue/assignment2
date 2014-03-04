@@ -43,5 +43,33 @@ function convertDecToHex(dec)
 		return "F";
 	}
 }
-var hex=convertDecToHex(input);
-alert(input+" is "+hex+" in hex");
+var hex=convertDecToHex(input).toString();
+function padTo4Digits(toPad)
+{
+	if(toPad.length==1)
+	{
+		toPad="000"+toPad
+		return toPad;
+	}
+
+	else if(toPad.length==2)
+	{
+		toPad="00"+toPad;
+		return toPad;
+	}
+
+	else if(toPad.length==3)
+	{
+		toPad="0"+toPad;
+		return toPad;
+	}
+
+	else if(toPad.length>=4)
+	{
+		return toPad;
+	}
+
+}
+console.log(padTo4Digits(hex));
+alert(padTo4Digits(input.toString())+" is "+padTo4Digits(hex)+" in hex");
+
